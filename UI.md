@@ -1093,7 +1093,7 @@
       <sub>assets/icons/build/stairs.png</sub><br />
     </td>
   <td align="center">
-      <img src="https://bullyrust.ru/sprite/assets/icons/build/wall.doorway.door.png" width="150" height="150" alt=""/><br />
+      <img src="https://bullyrust.ru/sprite/wall.doorway.door.png" width="150" height="150" alt=""/><br />
       <sub><b>----------------------------------</b></sub><br />
       <sub><b>wall.doorway.door</b></sub><br />
       <sub>assets/icons/build/wall.doorway.door.png</sub><br />
