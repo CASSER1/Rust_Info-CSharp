@@ -1093,16 +1093,16 @@
       <sub>assets/icons/build/stairs.png</sub><br />
     </td>
   <td align="center">
-      <img src="https://bullyrust.ru/sprite/wall.png" width="150" height="150" alt=""/><br />
+      <img src="https://bullyrust.ru/sprite/assets/icons/build/wall.doorway.door.png" width="150" height="150" alt=""/><br />
       <sub><b>----------------------------------</b></sub><br />
-      <sub><b>wall</b></sub><br />
+      <sub><b>wall.doorway.door</b></sub><br />
       <sub>assets/icons/build/wall.doorway.door.png</sub><br />
     </td>
 </tr><tr>
   <td align="center">
-      <img src="https://bullyrust.ru/sprite/wall.png" width="150" height="150" alt=""/><br />
+      <img src="https://bullyrust.ru/sprite/wall.window.bars.png" width="150" height="150" alt=""/><br />
       <sub><b>----------------------------------</b></sub><br />
-      <sub><b>wall</b></sub><br />
+      <sub><b>wall.window.bars.png</b></sub><br />
       <sub>assets/icons/build/wall.window.bars.png</sub><br />
     </td>
   <td align="center">
