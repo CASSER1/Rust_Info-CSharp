@@ -1,3 +1,5 @@
+## CATEGORY: icons
+
 <table>
 <td align="center">
       <img src="https://bullyrust.ru/sprite/add.png" width="150" height="150" alt=""/><br />
