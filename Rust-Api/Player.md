@@ -116,142 +116,223 @@ object OnMeleeAttack(BasePlayer player, HitInfo info)
     return null;
 }
 ```
-OnPlayerRecovered
-Called when the player was recovered
-No return behavior
+#On Player Recovered
+
+1. Called when the player was recovered  
+2. No return behavior
+
+```c
 void OnPlayerRecovered(BasePlayer player)
 {
     Puts("OnPlayerRecovered works!");
 }
-CanPushBoat
-Useful for canceling boat push
-Returning a non-null value cancels default behavior
+```
+
+#Can Push Boat
+
+1. Useful for canceling boat push  
+2. Returning a non-null value cancels default behavior
+
+```c
 object CanPushBoat(BasePlayer player, MotorRowboat boat)
 {
     Puts("CanPushBoat works!");
     return null;
 }
-CanDeployItem
-Useful for denying items' deployment
-Returning a non-null value cancels default behavior
+```
+
+#Can Deploy Item
+
+1. Useful for denying items' deployment  
+2. Returning a non-null value cancels default behavior
+
+```c
 object CanDeployItem(BasePlayer player, Deployer deployer, NetworkableId entityId)
 {
     Puts("CanDeployItem works!");
     return null;
 }
-OnPlayerAssist
-Called when a player tries to assist target player (when target is wounded)
-Returning a non-null value cancels default behavior
+```
+#On Player Assist
+
+1. Called when a player tries to assist target player (when target is wounded)  
+2. Returning a non-null value cancels default behavior
+
+```c
 object OnPlayerAssist(BasePlayer target, BasePlayer player)
 {
     Puts("OnPlayerAssist works!");
     return null;
 }
-OnPlayerSetInfo
-Called when setting player's information (aka console variables)
-No return behavior
+```
+
+#On Player Set Info
+1. Called when setting player's information (aka console variables)  
+2. No return behavior
+
+```c
 void OnPlayerSetInfo(Connection connection, string key, string value)
 {
     Puts($"{connection.userid}: {key} was set to {value}");
 }
-CanSpectateTarget
-Called when spectate target is attempting to update
-Returning a non-null value cancels default behavior
+```
+
+#Can Spectate Target
+
+1. Called when spectate target is attempting to update  
+2. Returning a non-null value cancels default behavior
+
+```c
 object CanSpectateTarget(BasePlayer player, string filter)
 {
     Puts($"{player.displayName} tries to spectate with a filter: {filter}");
     return null;
 }
-OnActiveItemChange
-Called when active item is attempting to update
-Returning a non-null value cancels default behavior
+```
+
+#On Active Item Change
+
+1. Called when active item is attempting to update  
+2. Returning a non-null value cancels default behavior
+
+```c
 object OnActiveItemChange(BasePlayer player, Item oldItem, ItemId newItemId)
 {
     Puts("OnActiveItemChange works!");
     return null;
 }
-OnActiveItemChanged
-Called when active item was changed
-No return behavior
+```
+
+#On Active Item Changed
+
+1. Called when active item was changed  
+2. No return behavior
+
+```c
 void OnActiveItemChanged(BasePlayer player, Item oldItem, Item newItem)
 {
     Puts("OnActiveItemChanged works!");
 }
-OnPayForUpgrade
-Called when player is paying for an upgrade. Useful for preventing paying for block upgrade
-Returning a non-null value cancels default behavior
+```
+#On Pay For Upgrade
+
+1. Called when player is paying for an upgrade. Useful for preventing paying for block upgrade  
+2. Returning a non-null value cancels default behavior
+
+```c
 object OnPayForUpgrade(BasePlayer player, BuildingBlock block, ConstructionGrade gradeTarget)
 {
     Puts("OnPayForUpgrade works!");
     return null;
 }
-OnMapMarkerRemove
-Called when trying to remove a marker
-Returning a non-null value cancels default behaviour
+```
+
+#On Map Marker Remove
+
+1. Called when trying to remove a marker  
+2. Returning a non-null value cancels default behaviour
+
+```c
 object OnMapMarkerRemove(BasePlayer player, MapNote note)
 {
     Puts("OnMapMarkerRemove works!");
     return null;
 }
-OnMapMarkerAdd
-Called when trying to add a marker
-Returning a non-null value cancels default behavior
+```
+
+#On Map Marker Add
+
+1. Called when trying to add a marker  
+2. Returning a non-null value cancels default behavior
+
+```c
 object OnMapMarkerAdd(BasePlayer player, MapNote note)
 {
     Puts("OnMapMarkerAdd works!");
     return null;
 }
-OnMapMarkerAdded
-Called after a marker was added
-No return behavior
+```
+
+#On Map Marker Added
+
+1. Called after a marker was added  
+2. No return behavior
+
+```c
 void OnMapMarkerAdded(BasePlayer player, MapNote note)
 {
     Puts("OnMapMarkerAdded works!");
 }
-OnMapMarkersClear
-Called when trying to clear map markers
-Returning a non-null value cancels default behavior
+```
+
+#On Map Markers Clear
+
+1. Called when trying to clear map markers  
+2. Returning a non-null value cancels default behavior
+
+```c
 object OnMapMarkersClear(BasePlayer player, List<MapNote> notes)
 {
     Puts("OnMapMarkersClear works!");
     return null;
 }
-OnMapMarkersCleared
-Called after markers were cleared
-No return behavior
+```
+#On Map Markers Cleared
+
+1. Called after markers were cleared  
+2. No return behavior
+
+```c
 void OnMapMarkersCleared(BasePlayer player, List<MapNote> notes)
 {
     Puts("OnMapMarkersCleared works!");
 }
-OnPayForPlacement
-Called when a player is paying for placement. Useful for preventing paying for placing deployables, building blocks and etc
-Returning a non-null value cancels default behavior
+```
+
+#On Pay For Placement
+1. Called when a player is paying for placement. Useful for preventing paying for placing deployables, building blocks and etc  
+2. Returning a non-null value cancels default behavior
+
+```c
 object OnPayForPlacement(BasePlayer player, Planner planner, Construction construction)
 {
     Puts("OnPayForPlacement works!");
     return null;
 }
-CanAffordToPlace
-Useful for ignoring resource requirements for placement
-Returning true or false overrides default behavior
+```
+
+#Can Afford To Place
+1. Useful for ignoring resource requirements for placement  
+2. Returning true or false overrides default behavior
  
+```c
 bool CanAffordToPlace(BasePlayer player, Planner planner, Construction construction)
 {
     Puts("CanAffordToPlace works!");
     return false;
 }
-OnPlayerKeepAlive
-Called before a player is kept alive (Example: You started "helping" player, it keeps him alive for at least 10 seconds more to be sure he won't die until you finish picking him up)
-Returning a non-null value cancels default behavior
+```
+
+#On Player Keep Alive
+
+1. Called before a player is kept alive (Example: You started "helping" player, it keeps him alive for at least 10 seconds more to be sure he won't die until you finish picking him up)  
+2. Returning a non-null value cancels default behavior
+
+```c
 object OnPlayerKeepAlive(BasePlayer player, BasePlayer target)
 {
     Puts("OnPlayerKeepAlive works!");
     return null;
 }
-OnSendCommand
-Called before a command is sent from the server to a player (or a group of players)
-Usually commands aren't sent to a group of players, so in most cases it's safe to use only OnSendCommand with a single Connection.
-Returning a non-null value overwrites command arguments
+```
+
+#On Send Command
+
+1. Called before a command is sent from the server to a player (or a group of players)  
+2. Usually commands aren't sent to a group of players, so in most cases it's safe to use only OnSendCommand with a single Connection.  
+3. Returning a non-null value overwrites command arguments
+
+```c
 object OnSendCommand(List<Connection> connections, string command, object[] args)
 {
     Puts("OnSendCommand works!");
@@ -263,68 +344,112 @@ object OnSendCommand(Connection connection, string command, object[] args)
     Puts("OnSendCommand works!");
     return null;
 }
-OnBroadcastCommand
-Called before a command is broadcasted to all connected clients
-Returning a non-null value overwrites command arguments
+```
+#On Broadcast Command
+
+1. Called before a command is broadcasted to all connected clients  
+2. Returning a non-null value overwrites command arguments
+
+```c
 object OnBroadcastCommand(string command, object[] args)
 {
     Puts("OnBroadcastCommand works!");
     return null;
 }
-OnUserRespawn
-Called when a player is respawning
-No return behavior
+```
+
+#On User Respawn
+
+1. Called when a player is respawning  
+2. No return behavior
+
+```c
 void OnUserRespawn(IPlayer player)
 {
     Puts("OnUserRespawn works!");
 }
-OnUserRespawned
-Called after a player has respawned
-No return behavior
+```
+
+#On User Respawned
+
+1. Called after a player has respawned  
+2. No return behavior
+
+```c
 void OnUserRespawned(IPlayer player)
 {
     Puts("OnUserRespawned works!");
 }
-OnPlayerReported
-Called when a player has reported someone via F7
-No return behavior
+```
+
+#On Player Reported
+
+1. Called when a player has reported someone via F7  
+2. No return behavior
+
+```c
 void OnPlayerReported(BasePlayer reporter, string targetName, string targetId, string subject, string message, string type)
 {
     Puts($"{reporter.displayName} reported {targetName} for {subject}.");
 }
-OnPlayerCorpse
-Called when a non-null corpse has just been spawned
-No return behavior
+```
+
+#On Player Corpse
+
+1. Called when a non-null corpse has just been spawned  
+2. No return behavior
+
+```c
 void OnPlayerCorpse(BasePlayer player, BaseCorpse corpse)
 {
     Puts($"A corpse for {player.displayName} has just been spawned!");
 }
-CanUseWires
-Useful for allowing or preventing a player from using wires
-Returning a non-null value overrides default behavior
+```
+
+#Can Use Wires
+
+1. Useful for allowing or preventing a player from using wires  
+2. Returning a non-null value overrides default behavior
+
+```c
 object CanUseWires(BasePlayer player)
 {
     Puts($"{player.displayName} has just tried to use wires");
     return null;
 }
-OnPlayerCorpseSpawn
-Called when a non-null corpse is about to spawn
-Returning a non-null value overrides default behavior
+```
+
+#On Player Corpse Spawn
+
+1. Called when a non-null corpse is about to spawn  
+2. Returning a non-null value overrides default behavior
+
+```c
 object OnPlayerCorpseSpawn(BasePlayer player)
 {
     Puts("OnPlayerCorpseSpawn works!");
     return null;
 }
-OnPlayerCorpseSpawned
-Called when a non-null corpse has just been spawned
-No return behavior
+```
+
+#On Player Corpse Spawned
+
+1. Called when a non-null corpse has just been spawned
+2. No return behavior
+
+```c
 void OnPlayerCorpseSpawned(BasePlayer player, PlayerCorpse corpse)
 {
     Puts("OnPlayerCorpseSpawned works!");
 }
-OnUserConnected
-Called after a player has been approved and has connected to the server
-No return behavior
+```
+
+#On User Connected
+
+1. Called after a player has been approved and has connected to the server  
+2. No return behavior
+
+```c
 void OnUserConnected(IPlayer player)
 {
     Puts($"{player.Name} ({player.Id}) connected from {player.Address}");
@@ -338,37 +463,59 @@ void OnUserConnected(IPlayer player)
 
     server.Broadcast($"Welcome {player.Name} to {server.Name}!");
 }
-OnUserDisconnected
-Called after a player has disconnected from the server
-No return behavior
+```
+
+#On User Disconnected
+
+1. Called after a player has disconnected from the server  
+2. No return behavior
+
+```c
 void OnUserDisconnected(IPlayer player)
 {
     Puts($"{player.Name} ({player.Id}) disconnected");
 }
-CanBeTargeted
-Called when an autoturret, flame turret, shotgun trap, or helicopter turret is attempting to target the player
-Returning true or false overrides default behavior
+```
+
+#Can Be Targeted
+
+1. Called when an autoturret, flame turret, shotgun trap, or helicopter turret is attempting to target the player  
+2. Returning true or false overrides default behavior
+
+```c
 bool CanBeTargeted(BaseCombatEntity player, MonoBehaviour behaviour)
 {
     Puts("CanBeTargeted works!");
     return true;
 }
-CanBeWounded
-Called when any damage is attempted on player
-Returning true or false overrides default behavior
+```
+
+#Can Be Wounded
+
+1. Called when any damage is attempted on player  
+2. Returning true or false overrides default behavior
+
+```c
 bool CanBeWounded(BasePlayer player, HitInfo info)
 {
     Puts("CanBeWounded works!");
     return true;
 }
-CanBuild
-Called when the player tries to build something
-Returning a non-null value overrides default behavior
+```
+
+#Can Build
+
+1. Called when the player tries to build something  
+2. Returning a non-null value overrides default behavior
+
+```c
 object CanBuild(Planner planner, Construction prefab, Construction.Target target)
 {
     Puts("CanBuild works!");
     return null;
 }
+```
+
 CanBypassQueue
 Called before the player is added to the connection queue
 Returning true will bypass the queue, returning nothing will by default queue the player
