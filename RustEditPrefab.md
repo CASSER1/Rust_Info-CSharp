@@ -1,3 +1,4 @@
+#test1
 <table>
 <tr>
   <td align="center">
@@ -1308,6 +1309,9 @@
       <sub><b>barge_container_park</b></sub><br />
     </td>
 </tr>
+</table>
+#test2
+<table>
 <tr>
   <td align="center">
       <img src="https://bullyrust.ru/RustEdit/barge_mooring_3600.prefab.png" width="300" height="300" alt=""/><br />
